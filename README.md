@@ -18,11 +18,11 @@ jobs:
     - uses: actions/checkout@v3
     - name: Login to gcloud registry
       id: gcloud
-      uses: elgohr/gcloud-login-action@v1
+      uses: elgohr/gcloud-login-action@v2
       with:
         account_key: ${{ secrets.GCLOUD_KEY }}
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v4
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: myDocker/repository
         username: ${{ steps.gcloud.outputs.username }}

@@ -12,12 +12,10 @@ teardown() {
     run /entrypoint.sh
 
     local expected='auth activate-service-account --key-file=/root/gcloud.json
-::set-output name=username::oauth2accesstoken
-::add-mask::auth print-access-token
-::set-output name=password::auth print-access-token'
+::add-mask::auth print-access-token'
     echo $output
     [ "$output" = "$expected" ]
-    expectGitHubEnvContains "password=auth print-access-token"
+    expectGitHubEnvContains "username=oauth2accesstokenpassword=auth print-access-token"
 
 }
 

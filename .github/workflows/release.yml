@@ -29,5 +29,5 @@ jobs:
         run: |
           git config --global user.email "no_reply@gohr.digital"
           git config --global user.name "Release Bot"
-          git tag -fa v1 -m "Update v1 tag"
-          git push origin v1 --force
+          git tag -fa v2 -m "Update v2 tag"
+          git push origin v2 --force
