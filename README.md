@@ -25,8 +25,8 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: myDocker/repository
-        username: ${{ steps.gcloud.outputs.username }}
-        password: ${{ steps.gcloud.outputs.password }}
+        username: ${{ env.username }}
+        password: ${{ env.password }}
         registry: gcr.io, us.gcr.io, eu.gcr.io or asia.gcr.io
 ```
 
